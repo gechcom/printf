@@ -38,7 +38,9 @@ int print_octal(va_list list);
 int print_hex(va_list list);
 int print_heX(va_list list);
 
+
 /*Helper functions*/
+
 unsigned int base_len(unsigned int, int);
 char *rev_string(char *);
 void write_base(char *str);
