@@ -1,7 +1,9 @@
-#ifndef PRINT_F
-#define PRINT_F
+#ifndef MAIN_H
+#define MAIN_H
+
 
 #include <unistd.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 
@@ -11,6 +13,7 @@
 * @sym: The operator
 * @f: The function associated
 */
+
 struct convert
 {
 	char *sym;
@@ -42,5 +45,4 @@ void write_base(char *str);
 char *_memcpy(char *dest, char *src, unsigned int n);
 int print_unsgined_number(unsigned int);
 
-
-#endif
+#endif /*MAIN_H*/
