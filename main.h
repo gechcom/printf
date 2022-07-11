@@ -2,57 +2,46 @@
 #define MAIN_H
 
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
-
-#define BUFFER_SIZE 1024
+#include <stdarg.h> /*for varyadic functions*/
+#include <stdlib.h> /*for malloc and NULL*/
+#include <stdio.h> /*for inputout[ut]*/
+#include <unistd.h> /*for write*/
+#include <limits.h> /* for test cases*/
 
 /**
- * struct spec - conversion specifiers and their associated functions
- *
- * @s: conversion specifier
- * @f: function associated with s
+ * struct special_cases - struct for the special cases
+ * @match: the special character to match after find a percentage
+ * @function: the associated function to be called in each specialcase
  */
-typedef struct spec
+
+typedef struct special_cases
 {
-	char s;
-	int (*f)(va_list, char *, int *, int *, char *);
-} spec_t;
+	char *match;
+	int (*function)(va_list);
+} spc_t;
 
+/*format and print data*/
 int _printf(const char *format, ...);
-int (*get_type(char))(va_list, char *, int *, int *, char *);
-int print(char *, size_t);
 
-int get_substring_length(const char *s);
-int get_specifier_length(const char *s);
-int get_printable_length(const char *s);
-int contains(char *s, char c);
-char validate_spec(char *spec);
+/*writes the character c to stdout*/
+int _putchar(char c);
 
-int ctoa(va_list valist, char *buffer, int *pos, int *n_printed, char *spec);
-int stoa(va_list valist, char *buffer, int *pos, int *n_printed, char *spec);
-int itoa(va_list valist, char *buffer, int *pos, int *n_printed, char *spec);
-int utoa(va_list valist, char *buffer, int *pos, int *n_printed, char *spec);
-int pcttoa(va_list valist, char *buffer, int *pos, int *n_printed, char *spec);
-int rot13(va_list valist, char *buffer, int *pos, int *n_printed, char *spec);
-int storev(va_list valist, char *buffer, int *pos, int *n_printed, char *spec);
-int btoa(va_list valist, char *buffer, int *pos, int *n_printed, char *spec);
-int otoa(va_list valist, char *buffer, int *pos, int *n_printed, char *spec);
-int xtoa(va_list valist, char *buffer, int *pos, int *n_printed, char *spec);
-int Xtoa(va_list valist, char *buffer, int *pos, int *n_printed, char *spec);
-int Stoa(va_list valist, char *buffer, int *pos, int *n_printed, char *spec);
-int ptoa(va_list valist, char *buffer, int *pos, int *n_printed, char *spec);
+/*search for match and execute the function according to this*/
+int (*mod_character_s(const char *next, int dino))(va_list);
 
-int ntoa(long n, char *buffer, int *pos, int *n_printed);
+/*prints a char*/
+int print_char(va_list c);
 
-void buffer_full(char *buffer, int *pos, int *n_printed);
-void string_to_buffer(char *s, char *buffer, int *pos, int *n_printed);
+/*prints a string */
+int print_string(va_list s);
 
-int _strlen(char *s);
-char *_strncpy(char *dest, const char *src, int n);
-char *_strdup(char *str);
-void rev_string(char *s);
+/*converts a string to an integer and prints its content.*/
+int print_number(va_list i);
+
+/*converts a string to an unsigned integer and prints its content*/
+int print_unsigned(va_list u);
+
+/*prints a string in reverse*/
+int print_reverse(va_list r);
 
 #endif /*MAIN_H*/
