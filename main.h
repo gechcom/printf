@@ -13,6 +13,7 @@
   * @sc: The specifiers
   * @f: The function associated
   */
+
 typedef struct code_format
 {
 	char *sc;
