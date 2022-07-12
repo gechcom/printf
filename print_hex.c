@@ -7,6 +7,7 @@
 * Descriptions: prints unsigned in hexadecimal with _putchar
 * Return: size the output
 */
+
 int print_hex(unsigned int n, unsigned int c)
 {
 	unsigned int len, powten, j, digit, num;
