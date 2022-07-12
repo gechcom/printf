@@ -5,7 +5,6 @@
 #include <stdarg.h> /*for varyadic functions*/
 #include <stdlib.h> /*for malloc and NULL*/
 #include <stdio.h> /*for inputout[ut]*/
-#include <unistd.h> /*for write*/
 
 /**
   * struct code_format - Struct format
