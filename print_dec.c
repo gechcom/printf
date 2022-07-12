@@ -6,6 +6,7 @@
 * Descriptions: prints digit with _putchar
 * Return: size the output text
 */
+
 int print_dec(va_list d)
 {
 	int len, powten, j, digit, n, count = 0, num;
