@@ -6,6 +6,7 @@
  *
  * Return: 1.
  */
+
 int print_char(va_list c)
 {
 	unsigned char my_char;
