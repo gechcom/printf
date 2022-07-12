@@ -6,6 +6,7 @@
 #include <stdlib.h> /*for malloc and NULL*/
 #include <stdio.h> /*for inputout[ut]*/
 
+
 /**
   * struct code_format - Struct format
   *
