@@ -7,6 +7,7 @@
   * @format: format (char, string, int, decimal)
   * Return: NULL or function associated ;
   */
+
 int (*find_function(const char *format))(va_list)
 {
 	unsigned int i = 0;
