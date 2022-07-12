@@ -7,6 +7,7 @@
   * @R: string to convert
   * Return: size the output text
   */
+
 int print_rot13(va_list R)
 {
 	int j, i, count = 0;
