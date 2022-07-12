@@ -1,11 +1,13 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include "main.h"
+
 /**
 *print_rev - prints astring in reverse
 *@r: string to print
 *Return: number of chars printed
 */
+
 int print_rev(va_list r)
 {
 	char *st;
