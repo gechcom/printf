@@ -59,3 +59,4 @@ _printf("%s, %s %d, %d\\n", weekday, month, day, year);
 .I printf(3)
 .SH AUTHOR
 gechcom Eyerusalem birhanu
+
